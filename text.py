@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import pygame
-from pygame.locals import *
 
 pygame.init()
 clock = pygame.time.Clock()
@@ -22,8 +21,9 @@ def main():
         bigText = pygame.font.SysFont('freesans', 36)
 
         # Définition du texte
+        # render(text, antialias, rgb color tuple)
         title_text = bigText.render("Maître Corbeau sur un arbre perché",
-                                    1, ORANGE)
+                                    True, ORANGE)
         # Position: horizontal au centre , vertical = 50
         # Le centre du texte est au centre quelque soit le texte
         # Le texte est inscrit dans un rectangle
@@ -39,7 +39,7 @@ def main():
         fenetre.blit(background, (0, 0))
 
         for event in pygame.event.get():
-            if event.type == QUIT:
+            if event.type == pygame.QUIT:
                 loop = False
 
         # Actualisation de l'affichage

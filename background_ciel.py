@@ -2,9 +2,6 @@
 # -*- coding: utf-8 -*-
 
 import pygame
-# This line is optional, and puts a limited set of constants and functions
-# into the global namespace of your script
-from pygame.locals import *
 
 # Before you can do much with pygame, you will need to initialize it
 pygame.init()
@@ -23,7 +20,7 @@ def main():
 
     while loop:
         for event in pygame.event.get():
-            if event.type == QUIT:
+            if event.type == pygame.QUIT:
                 loop = False
 
         # Superposition du fond ciel
